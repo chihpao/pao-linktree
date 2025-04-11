@@ -1,7 +1,7 @@
 <template>
-  <div 
+  <div
     class="link-card"
-    :class="{ 'animated': animated }"
+    :class="{ animated: animated }"
     @mouseenter="hover = true"
     @mouseleave="hover = false"
   >
@@ -20,24 +20,24 @@
 </template>
 
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { gsap } from 'gsap';
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { gsap } from "gsap";
 
 export default {
-  name: 'LinkCard',
+  name: "LinkCard",
   components: {
-    FontAwesomeIcon
+    FontAwesomeIcon,
   },
   props: {
     link: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       hover: false,
-      animated: false
+      animated: false,
     };
   },
   mounted() {
@@ -49,7 +49,7 @@ export default {
       delay: this.$props.link.index * 0.1,
       onComplete: () => {
         this.animated = true;
-      }
+      },
     });
   },
   watch: {
@@ -58,18 +58,18 @@ export default {
         gsap.to(this.$el, {
           scale: 1.03,
           duration: 0.3,
-          ease: 'power2.out'
+          ease: "power2.out",
         });
       } else {
         gsap.to(this.$el, {
           scale: 1,
           duration: 0.3,
-          ease: 'power2.out'
+          ease: "power2.out",
         });
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -80,23 +80,23 @@ export default {
   background-color: var(--card-bg);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+
   &:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   }
-  
+
   a {
     display: block;
     padding: 16px;
     text-decoration: none;
     color: var(--text-color);
   }
-  
+
   .link-content {
     display: flex;
     align-items: center;
   }
-  
+
   .link-icon {
     margin-right: 15px;
     width: 30px;
@@ -104,16 +104,16 @@ export default {
     font-size: 1.2rem;
     color: var(--accent-color);
   }
-  
+
   .link-text {
     flex: 1;
-    
+
     h3 {
       margin: 0 0 4px;
       font-size: 1rem;
       font-weight: 600;
     }
-    
+
     p {
       margin: 0;
       font-size: 0.8rem;
@@ -125,11 +125,11 @@ export default {
 @media (max-width: 768px) {
   .link-card {
     margin: 10px 0;
-    
+
     .link-text h3 {
       font-size: 0.9rem;
     }
-    
+
     .link-text p {
       font-size: 0.75rem;
     }

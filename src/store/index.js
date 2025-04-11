@@ -1,9 +1,13 @@
-import { createStore } from "vuex";
+import Vue from "vue";
+import Vuex from "vuex";
+import links from "./modules/links";
+import theme from "./modules/theme";
 
-export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+  modules: {
+    links,
+    theme,
+  },
 });
