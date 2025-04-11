@@ -2,7 +2,7 @@
   <div class="profile-header">
     <div class="profile-avatar" ref="avatarEl">
       <img
-        :src="profileData.avatar || require('@/assets/default-avatar.png')"
+        :src="profileData.avatar || require('@/assets/Pao_avatar_small.png')"
         alt="Profile Avatar"
       />
     </div>

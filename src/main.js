@@ -1,4 +1,4 @@
-import Vue from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -29,12 +29,9 @@ library.add(
   faSun
 );
 
-Vue.component("font-awesome-icon", FontAwesomeIcon);
+const app = createApp(App);
 
-Vue.config.productionTip = false;
+// 註冊全局組件
+app.component("font-awesome-icon", FontAwesomeIcon);
 
-new Vue({
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount("#app");
+app.use(store).use(router).mount("#app");
