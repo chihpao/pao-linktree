@@ -77,7 +77,11 @@ export default {
 }
 
 .links-container {
-  margin: 20px 0;
+  margin: 5px 0;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer {
@@ -119,6 +123,11 @@ footer {
 @media (max-width: 768px) {
   .content {
     padding: 50px 0 30px;
+  }
+
+  .links-container {
+    max-width: 100%;
+    padding: 0 15px;
   }
 
   .loading-spinner .spinner {

@@ -51,15 +51,15 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 32px;
-  padding: 20px;
+  margin-bottom: 0;
+  padding: 15px 20px 0;
   text-align: center;
 
   .profile-avatar {
     position: relative;
     width: 100px;
     height: 100px;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -72,17 +72,20 @@ export default {
   }
 
   .profile-info {
+    width: 100%;
+
     h1 {
       font-size: 1.8rem;
-      margin: 0 0 8px;
+      margin: 0 0 2px;
     }
 
     p {
       font-size: 1rem;
       margin: 0;
       opacity: 0.8;
-      max-width: 80%;
+      white-space: nowrap;
       margin: 0 auto;
+      display: inline-block;
     }
   }
 }
@@ -103,6 +106,8 @@ export default {
 
       p {
         font-size: 0.9rem;
+        white-space: nowrap;
+        display: inline-block;
       }
     }
   }

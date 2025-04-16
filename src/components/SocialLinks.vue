@@ -73,20 +73,21 @@ export default {
 .social-links {
   display: flex;
   justify-content: center;
-  margin: 16px 0;
-  gap: 15px;
+  margin: 0;
+  gap: 10px;
 
   .social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: var(--card-bg);
     color: var(--accent-color);
     box-shadow: 0 2px 6px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    font-size: 0.8rem;
 
     &:hover {
       transform: translateY(-3px);

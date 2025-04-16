@@ -8,14 +8,19 @@ const getters = {
 
 const actions = {
   toggleDarkMode({ commit, state }) {
-    commit("setDarkMode", !state.darkMode);
+    // 先保存新的主題狀態
+    const newDarkMode = !state.darkMode;
+
+    // 更新 Vuex 狀態
+    commit("setDarkMode", newDarkMode);
+
     // 保存用戶偏好
-    localStorage.setItem("darkMode", !state.darkMode);
+    localStorage.setItem("darkMode", newDarkMode);
 
     // 設置 CSS 變數
     document.documentElement.setAttribute(
       "data-theme",
-      !state.darkMode ? "dark" : "light"
+      newDarkMode ? "dark" : "light"
     );
   },
 

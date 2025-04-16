@@ -41,12 +41,13 @@ export default {
     };
   },
   mounted() {
-    // 進場動畫
+    // 進場動畫 - 不使用基於索引的延遲，以避免影響間距
     gsap.from(this.$el, {
-      y: 50,
+      y: 20,
       opacity: 0,
-      duration: 0.6,
-      delay: this.$props.link.index * 0.1,
+      duration: 0.4,
+      delay: 0.2, // 固定延遲時間，不使用索引
+      ease: "power1.out",
       onComplete: () => {
         this.animated = true;
       },
@@ -74,27 +75,31 @@ export default {
 
 <style lang="scss" scoped>
 .link-card {
-  margin: 12px 0;
-  border-radius: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
   overflow: hidden;
   background-color: var(--card-bg);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 58px; /* 確保所有卡片高度一致 */
 
   &:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
   }
 
   a {
-    display: block;
-    padding: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
     text-decoration: none;
     color: var(--text-color);
+    height: 100%;
   }
 
   .link-content {
     display: flex;
     align-items: center;
+    width: 100%;
   }
 
   .link-icon {
@@ -103,21 +108,29 @@ export default {
     text-align: center;
     font-size: 1.2rem;
     color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .link-text {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     h3 {
-      margin: 0 0 4px;
+      margin: 0 0 2px;
       font-size: 1rem;
       font-weight: 600;
+      line-height: 1.2;
     }
 
     p {
       margin: 0;
       font-size: 0.8rem;
       opacity: 0.7;
+      line-height: 1.2;
     }
   }
 }

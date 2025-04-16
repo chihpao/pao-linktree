@@ -1,10 +1,10 @@
 import {
   faGithub,
-  faTwitter,
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { faGlobe, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+import { faGlobe, faEnvelope, faN } from "@fortawesome/free-solid-svg-icons";
 
 // 示範數據，實際應用可以連接到 API
 const state = {
@@ -16,9 +16,9 @@ const state = {
   links: [
     {
       id: 1,
-      title: "個人網站",
-      description: "查看我的作品集",
-      url: "https://yourwebsite.com",
+      title: "Stupid Cat 網站",
+      description: "React、Tailwind CSS、vercel部署、API整合",
+      url: "https://funnywebsitegoodapi.vercel.app/",
       icon: faGlobe,
       index: 0,
     },
@@ -40,10 +40,10 @@ const state = {
     },
     {
       id: 4,
-      title: "Twitter",
-      description: "最新動態",
-      url: "https://twitter.com/yourusername",
-      icon: faTwitter,
+      title: "Notion",
+      description: "學歷過程",
+      url: "https://chihpao.notion.site/120daaa899518090a0e8ffef49017ccc",
+      icon: faN,
       index: 3,
     },
     {
@@ -57,8 +57,8 @@ const state = {
     {
       id: 6,
       title: "聯絡我",
-      description: "hello@example.com",
-      url: "mailto:hello@example.com",
+      description: "chihpaoo@gmail.com",
+      url: "mailto:chihpaoo@gmail.com",
       icon: faEnvelope,
       index: 5,
     },
