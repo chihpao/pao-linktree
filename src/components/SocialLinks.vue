@@ -1,7 +1,7 @@
 <template>
   <div class="social-links" ref="socialLinksEl">
     <a
-      v-for="icon in socialIcons"
+      v-for="icon in storeIcons"
       :key="icon.name"
       :href="icon.url"
       :aria-label="icon.name"
@@ -16,12 +16,7 @@
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import {
-  faGithub,
-  faTwitter,
-  faLinkedin,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { mapGetters } from "vuex";
 import { gsap } from "gsap";
 
 export default {
@@ -29,31 +24,10 @@ export default {
   components: {
     FontAwesomeIcon,
   },
-  data() {
-    return {
-      socialIcons: [
-        {
-          name: "GitHub",
-          icon: faGithub,
-          url: "https://github.com/yourusername",
-        },
-        {
-          name: "Twitter",
-          icon: faTwitter,
-          url: "https://twitter.com/yourusername",
-        },
-        {
-          name: "LinkedIn",
-          icon: faLinkedin,
-          url: "https://linkedin.com/in/yourusername",
-        },
-        {
-          name: "Instagram",
-          icon: faInstagram,
-          url: "https://instagram.com/yourusername",
-        },
-      ],
-    };
+  computed: {
+    ...mapGetters({
+      storeIcons: "links/socialIcons",
+    }),
   },
   mounted() {
     // 社交圖標彈跳進場動畫

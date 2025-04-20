@@ -10,9 +10,28 @@ import { faGlobe, faEnvelope, faN } from "@fortawesome/free-solid-svg-icons";
 const state = {
   profileData: {
     name: "阿保保",
-    bio: "前端開發者 | 網頁設計 | 社工",
+    bio: "前端開發&網頁設計 ❘ 專案管理 ❘ 社工",
     avatar: null, // 可以使用 require('@/assets/avatar.jpg') 或 URL
   },
+  // 社交媒體圖標（用於頁面頂部的小圖標）
+  socialIcons: [
+    {
+      name: "GitHub",
+      icon: faGithub,
+      url: "https://github.com/chihpao",
+    },
+    {
+      name: "LinkedIn",
+      icon: faLinkedin,
+      url: "https://linkedin.com/in/yourusername",
+    },
+    {
+      name: "Instagram",
+      icon: faInstagram,
+      url: "https://instagram.com/yourusername",
+    },
+  ],
+  // 主要連結（用於卡片展示）
   links: [
     {
       id: 1,
@@ -26,7 +45,7 @@ const state = {
       id: 2,
       title: "GitHub",
       description: "探索我的程式碼專案",
-      url: "https://github.com/yourusername",
+      url: "https://github.com/chihpao",
       icon: faGithub,
       index: 1,
     },
@@ -34,7 +53,7 @@ const state = {
       id: 3,
       title: "LinkedIn",
       description: "我的專業網絡",
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile",
       icon: faLinkedin,
       index: 2,
     },
@@ -50,7 +69,7 @@ const state = {
       id: 5,
       title: "Instagram",
       description: "生活紀實",
-      url: "https://instagram.com/yourusername",
+      url: "https://www.instagram.com/chihpaoo/",
       icon: faInstagram,
       index: 4,
     },
@@ -70,6 +89,7 @@ const state = {
 const getters = {
   allLinks: (state) => state.links,
   profile: (state) => state.profileData,
+  socialIcons: (state) => state.socialIcons,
 };
 
 const actions = {

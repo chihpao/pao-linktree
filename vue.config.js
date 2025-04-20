@@ -29,10 +29,10 @@ module.exports = {
     }
   },
 
-// chainWebpack: (config) => {
-//   if (process.env.NODE_ENV === "production") {
-      // 壓縮圖片  
-      /*
+  // chainWebpack: (config) => {
+  //   if (process.env.NODE_ENV === "production") {
+  // 壓縮圖片
+  /*
       config.module
         .rule("images")
         .use("image-webpack-loader")
@@ -41,7 +41,7 @@ module.exports = {
           bypassOnDebug: true,
         })
         .end();
-      */ // 
+      */ //
 
   // PWA 配置
   pwa: {

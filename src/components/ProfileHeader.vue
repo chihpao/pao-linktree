@@ -8,7 +8,14 @@
     </div>
     <div class="profile-info" ref="infoEl">
       <h1>{{ profileData.name }}</h1>
-      <p>{{ profileData.bio }}</p>
+      <p>
+        <span
+          class="bio-text"
+          ref="bioText"
+          @dblclick.prevent="selectBioText"
+          >{{ profileData.bio }}</span
+        >
+      </p>
     </div>
   </div>
 </template>
@@ -42,6 +49,16 @@ export default {
       },
       "-=0.3"
     );
+  },
+  methods: {
+    // 雙擊時選擇整個 bio 文字
+    selectBioText() {
+      const range = document.createRange();
+      range.selectNodeContents(this.$refs.bioText);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+    },
   },
 };
 </script>
@@ -83,9 +100,12 @@ export default {
       font-size: 1rem;
       margin: 0;
       opacity: 0.8;
-      white-space: nowrap;
       margin: 0 auto;
       display: inline-block;
+    }
+
+    .bio-text {
+      white-space: nowrap;
     }
   }
 }
