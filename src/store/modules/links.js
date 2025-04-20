@@ -2,6 +2,7 @@ import {
   faGithub,
   faLinkedin,
   faInstagram,
+  faSpotify,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { faGlobe, faEnvelope, faN } from "@fortawesome/free-solid-svg-icons";
@@ -75,11 +76,19 @@ const state = {
     },
     {
       id: 6,
+      title: "在咖啡廳轉生成為冰美",
+      description: "我的Podcast",
+      url: "https://open.spotify.com/show/2gMSpNkgeKlE2Nyu8Ru4gw",
+      icon: faSpotify,
+      index: 5,
+    },
+    {
+      id: 7,
       title: "聯絡我",
       description: "chihpaoo@gmail.com",
       url: "mailto:chihpaoo@gmail.com",
       icon: faEnvelope,
-      index: 5,
+      index: 6,
     },
   ],
   loading: false,
