@@ -71,6 +71,7 @@ export default {
     height: 35px;
     font-size: 1rem;
     position: absolute;
+    z-index: 100;
   }
 }
 </style>

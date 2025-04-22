@@ -82,6 +82,7 @@ export default {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 58px; /* 確保所有卡片高度一致 */
+  width: 100%; /* 確保卡片寬度充滿容器 */
 
   &:hover {
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
@@ -138,6 +139,8 @@ export default {
 @media (max-width: 768px) {
   .link-card {
     margin: 10px 0;
+    width: 90%; /* 手機版面卡片寬度縮小為90% */
+    max-width: 400px;
 
     .link-text h3 {
       font-size: 0.9rem;

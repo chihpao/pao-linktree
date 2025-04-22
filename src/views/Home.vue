@@ -82,6 +82,9 @@ export default {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer {
@@ -127,9 +130,9 @@ footer {
 
   .links-container {
     max-width: 100%;
-    padding: 0 15px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   .loading-spinner .spinner {
