@@ -128,6 +128,8 @@ footer {
   .links-container {
     max-width: 100%;
     padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .loading-spinner .spinner {

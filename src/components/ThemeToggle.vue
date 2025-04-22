@@ -70,6 +70,7 @@ export default {
     width: 35px;
     height: 35px;
     font-size: 1rem;
+    position: absolute;
   }
 }
 </style>
