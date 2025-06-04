@@ -102,6 +102,7 @@ export default {
       opacity: 0.8;
       margin: 0 auto;
       display: inline-block;
+      margin-bottom: -15px;
     }
 
     .bio-text {
@@ -113,6 +114,7 @@ export default {
 @media (max-width: 768px) {
   .profile-header {
     padding: 15px;
+    margin-bottom: -30px;
 
     .profile-avatar {
       width: 80px;
@@ -128,6 +130,7 @@ export default {
         font-size: 0.9rem;
         white-space: nowrap;
         display: inline-block;
+        margin-bottom: -25px;
       }
     }
   }
